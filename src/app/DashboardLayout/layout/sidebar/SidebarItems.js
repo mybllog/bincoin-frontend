@@ -1,0 +1,37 @@
+"use client"
+import React from "react";
+import Menuitems from "./MenuItems";
+import { usePathname } from "next/navigation";
+import { Box, List } from "@mui/material";
+import NavItem from "./NavItem";
+import NavGroup from "./NavGroup/NavGroup";
+
+const SidebarItems = ({ toggleMobileSidebar }) => {
+  const pathname = usePathname();
+  const pathDirect = pathname;
+  
+  return (
+    <Box sx={{ px: 3 }}>
+      <List sx={{ pt: 0 }} className="sidebarNav" component="div">
+        {Menuitems.map((item) => {
+          // SubHeader
+          if (item.subheader) {
+            return <NavGroup item={item} key={item.subheader} />;
+          } else {
+            // If Sub Menu
+            return (
+              <NavItem
+                item={item}
+                key={item.id}
+                pathDirect={pathDirect}
+                onClick={toggleMobileSidebar}
+              />
+            );
+          }
+        })}
+      </List>
+    </Box>
+  );
+};
+
+export default SidebarItems;

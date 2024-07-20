@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx"
+, "src/app/DashboardLayout/components/dashboard/YearlyBreakup.js", "src/app/DashboardLayout/components/dashboard/SalesOverview.js", "src/app/DashboardLayout/components/dashboard/RecentTransactions.js", "src/app/DashboardLayout/components/dashboard/ProductPerformance.js", "src/app/DashboardLayout/components/dashboard/MonthlyEarnings.js", "src/app/DashboardLayout/components/dashboard/Blog.js", "src/app/DashboardLayout/components/container/PageContainer.jsr/PageContainer.js", "src/app/(overview)/login/page.js", "src/app/(overview)/signup/page.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
